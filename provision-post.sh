@@ -2,24 +2,22 @@
 
 set -ex;
 
-curl https://raw.githubusercontent.com/miya0001/wp-instant-setup/master/run.sh | bash
+bin/wp plugin install theme-check --activate
+bin/wp plugin install debogger --activate
+bin/wp plugin install log-deprecated-notices --activate
+bin/wp plugin install monster-widget
+bin/wp plugin install wordpress-beta-tester --activate
+bin/wp plugin install regenerate-thumbnails --activate
+bin/wp plugin install debug-bar --activate
+bin/wp plugin install wordpress-importer --activate
 
-wp option blogname "This is the long blog name for the theme review"
-wp option blogdescription "This is a very very long tagline to reviewed in theme review proccess. Yeah!"
-wp option comments_per_page "5"
-wp option large_size_h ""
-wp option large_size_w ""
-wp option page_comments "1"
-wp option permalink_structure "/archives/%post_id%"
-wp option posts_per_page "5"
-wp option thread_comments "1"
-wp option thread_comments_depth "3"
-
-wp plugin install theme-check --activate
-wp plugin install debogger --activate
-wp plugin install log-deprecated-notices --activate
-wp plugin install monster-widget
-wp plugin install wordpress-beta-tester --activate
-wp plugin install regenerate-thumbnails --activate
-wp plugin install debug-bar --activate
-wp plugin install wordpress-importer --activate
+bin/wp option blogname "This is the long blog name for the theme review"
+bin/wp option blogdescription "This is a very very long tagline to reviewed in theme review proccess. Yeah!"
+bin/wp option comments_per_page "5"
+bin/wp option large_size_h ""
+bin/wp option large_size_w ""
+bin/wp option page_comments "1"
+bin/wp option permalink_structure "/archives/%post_id%"
+bin/wp option posts_per_page "5"
+bin/wp option thread_comments "1"
+bin/wp option thread_comments_depth "3"
