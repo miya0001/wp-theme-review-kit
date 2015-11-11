@@ -23,4 +23,4 @@ bin/wp option update thread_comments "1"
 bin/wp option update thread_comments_depth "3"
 
 curl -o theme-unit-test-data.xml https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
-bin/wp import --authors=create https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
+bin/wp import --authors=create theme-unit-test-data.xml
