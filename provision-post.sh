@@ -11,13 +11,15 @@ bin/wp plugin install regenerate-thumbnails --activate
 bin/wp plugin install debug-bar --activate
 bin/wp plugin install wordpress-importer --activate
 
-bin/wp option blogname "This is the long blog name for the theme review"
-bin/wp option blogdescription "This is a very very long tagline to reviewed in theme review proccess. Yeah!"
-bin/wp option comments_per_page "5"
-bin/wp option large_size_h ""
-bin/wp option large_size_w ""
-bin/wp option page_comments "1"
-bin/wp option permalink_structure "/archives/%post_id%"
-bin/wp option posts_per_page "5"
-bin/wp option thread_comments "1"
-bin/wp option thread_comments_depth "3"
+bin/wp option update blogname "This is the long blog name for the theme review"
+bin/wp option update blogdescription "This is a very very long tagline to reviewed in theme review proccess. Yeah!"
+bin/wp option update comments_per_page "5"
+bin/wp option update large_size_h ""
+bin/wp option update large_size_w ""
+bin/wp option update page_comments "1"
+bin/wp option update permalink_structure "/archives/%post_id%"
+bin/wp option update posts_per_page "5"
+bin/wp option update thread_comments "1"
+bin/wp option update thread_comments_depth "3"
+
+bin/wp import --authors=create https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
